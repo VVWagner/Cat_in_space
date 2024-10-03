@@ -1,0 +1,186 @@
+* {
+    font-size: 24px;
+    color: white;
+}
+
+body {
+    background: #050a24;
+}
+
+.wrap {
+    width: 900px;
+    height: 500px;
+    margin: 30px auto;
+    border-radius: 6px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/bg.jpg');
+    box-shadow: 2px 2px 28px 3px #000000;
+    /* overflow: hidden !important; */
+}
+
+.title,
+.score {
+    text-align: center;
+}
+
+.gift {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/images/star.png');
+    animation: rotation 14s infinite linear;
+}
+
+.enemy {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/images/enemy.png');
+    animation: resizeEnemy 3s linear infinite;
+}
+
+.star-appearance {
+    animation: starAppearance 1s linear;
+}
+
+.hero {
+    width: 40px;
+    height: 56px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/images/cat.png');
+    filter: drop-shadow(1px 1px 7px rgb(65, 65, 65));
+}
+
+.lifes_wrap {
+    display: flex;
+    margin: 0 auto;
+    width: 160px;
+}
+
+.lifes {
+    animation: pulseHearts 1s infinite linear;
+}
+
+.lifes img {
+    width: 40px;
+    height: 40px;
+    margin: 0 6px;
+}
+
+.final-text {
+    position: relative;
+    font-size: 160px;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 50px;
+    color: rgb(184, 39, 39);
+}
+
+.final-score-text {
+    font-size: 36px;
+    background: rgb(0 0 0 / 60%);
+    padding: 15px 10px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.final-score-text span {
+    font-size: 44px;
+}
+
+.final-btn {
+    background: #7530a3;
+    font-size: 36px;
+    padding: 6px 20px;
+    color: white;
+    text-shadow: 3px 3px 4px black;
+    font-family: monospace;
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 2px 24px 3px rgb(33 32 74);
+    animation: resizeEnemy 2s linear infinite;
+}
+
+.final-btn:hover {
+    transform: scale(1.05);
+    background: #0e9fb3;
+    box-shadow: 1px 2px 18px 2px rgb(53, 52, 97);
+}
+
+.final {
+    display: none;
+    margin: auto;
+    width: max-content;
+    text-align: -webkit-center;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes pulseHearts {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.03, 1.05, 1.03);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes starAppearance {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes resizeEnemy {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
