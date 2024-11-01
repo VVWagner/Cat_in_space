@@ -1,6 +1,8 @@
 * {
     font-size: 24px;
     color: white;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 400;
 }
 
 body {
@@ -23,6 +25,12 @@ body {
 .title,
 .score {
     text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    color:#4de0f3;
+    text-shadow: 1px 1px 2px rgb(0 0 0), 2px 2px 12px rgb(143 50 231), 0 0 17px #f1ddff;
 }
 
 .gift {
@@ -77,15 +85,18 @@ body {
 
 .final-text {
     position: relative;
-    font-size: 160px;
+    font-size: 115px;
     text-align: center;
-    margin-top: 6%;
-    margin-bottom: 50px;
+    margin-top: 0%;
+    padding: 34px 10px 26px 30px;
+    margin-bottom: 36px;
     color: rgb(184, 39, 39);
+    background: #02040e;
+    font-family: "Sixtyfour Convergence", sans-serif;
 }
 
 .final-score-text {
-    font-size: 36px;
+    font-size: 26px;
     background: rgb(0 0 0 / 60%);
     padding: 15px 10px;
     border-radius: 8px;
@@ -102,10 +113,9 @@ body {
     padding: 6px 20px;
     color: white;
     text-shadow: 3px 3px 4px black;
-    font-family: monospace;
     display: flex;
     margin: auto;
-    margin-top: 60px;
+    margin-bottom: 40px;
     border-radius: 10px;
     cursor: pointer;
     border: none;
@@ -124,6 +134,12 @@ body {
     margin: auto;
     width: max-content;
     text-align: -webkit-center;
+}
+
+#final_score {
+    white-space: pre-line;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-size: 23px;
 }
 
 /* ------------------------------------------------------------ */
@@ -180,6 +196,7 @@ body {
     50% {
         transform: scale(0.9);
     }
+
     100% {
         transform: scale(1);
     }

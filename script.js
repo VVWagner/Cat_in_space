@@ -12,7 +12,7 @@ let hero = document.createElement('div');
 let gift = document.createElement('div');
 let enemy = document.createElement('div');
 let fullTime = new Date();
-let time = fullTime.getHours() + ' ' + fullTime.getMinutes();
+let time = (String(fullTime.getHours()).length < 2 ? ('0' + fullTime.getHours()) : fullTime.getHours()) + ':' + (String(fullTime.getMinutes()).length < 2 ? ('0' + fullTime.getMinutes()) : fullTime.getMinutes()) + ':' + (String(fullTime.getSeconds()).length < 2 ? ('0' + fullTime.getSeconds()) : fullTime.getSeconds());
 let localStorageSize = window.localStorage.length;
 
 
@@ -115,7 +115,7 @@ body.addEventListener('keypress', function (event) {
 
             for (let i = 0; i < localStorage.length; i++) {
                 let key = localStorage.key(i);
-                finalScore.textContent += `${key}: ${localStorage.getItem(key)}`;
+                finalScore.textContent += `${i}. ${key} : ${localStorage.getItem(key)}points `;
             }
         }
     }
@@ -194,6 +194,23 @@ body.addEventListener('keypress', function (event) {
                 }
             }
             break;
+
+        case 'q':
+        case 'й':
+            lifes.removeChild(last);
+            if (lifes.children.length === 0) {
+                setTimeout(() => gameWrap.style.display = 'none', 100);
+                setTimeout(() => final.style.display = 'block', 200);
+                // document.cookie += `${time}=${points}`;
+                window.localStorage.setItem(time, points);
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    let key = localStorage.key(i);
+                    finalScore.textContent += key + ' - ' + localStorage.getItem(key) + ' points' + '\r\n';
+                }
+                let kek = finalScore.textContent.split('\r\n');
+                console.log(kek);
+            }
     }
 });
 
