@@ -1,0 +1,241 @@
+* {
+    font-family: "Matemasie", sans-serif;
+    cursor: url(images/cursor.png) 2 2, default;
+}
+
+body {
+    background: rgb(15, 49, 54);
+    background: url(images/bg_all.jpg);
+    background-size: cover;
+    background: rgb(36 36 36);
+}
+
+.choice {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    left: 14%;
+    top: 190px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.choice_title {
+    font-size: 37px;
+    color: #f2ff00;
+    text-shadow: 2px 2px black, 7px 7px #2574ba, -2px -2px #000000;
+    margin-bottom: 30px;
+}
+
+input {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input:checked+label {
+    color: #4ae0ef;
+}
+
+.container {
+    width: 480px;
+    height: 480px;
+    margin: 30px auto;
+}
+
+.wrap_game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    justify-content: center;
+    background: url(images/bg.jpg);
+    box-shadow: 2px 2px 38px 2px;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 34px;
+    color: #fe6625;
+    text-shadow: 2px 2px black, 5px 5px #1c639e, -3px -3px #fff86a;
+}
+
+.start {
+    position: absolute;
+    background: url(images/bg.jpg);
+    z-index: 1;
+    width: 480px;
+    height: 480px;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.start_text {
+    display: block;
+    font-size: 64px;
+    color: #f2ff00;
+    padding-top: 190px;
+    font-family: "Matemasie", sans-serif;
+    text-shadow: 2px 2px black, 7px 7px #2574ba, -2px -2px #000000;
+    animation: increasing 2s infinite linear;
+}
+
+.end {
+    position: absolute;
+    z-index: 2;
+    background: cadetblue;
+    width: 480px;
+    height: 480px;
+    text-align: center;
+    border-radius: 14px;
+    top: 133px;
+    font-size: 74px;
+    color: rgb(230, 238, 254);
+    padding-top: 100px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px black, 4px 5px #000000, -2px -2px #000000;
+    display: none;
+    box-shadow: inset 0px 0px 24px rgb(0, 0, 0);
+}
+
+.restart {
+    display: inline-flex;
+    font-size: 42px;
+    color: #f2ff00;
+    margin-top: 90px;
+    padding: 6px 12px 14px;
+    font-family: "Matemasie", sans-serif;
+    text-shadow: 2px 2px black, 4px 4px #2574ba, -2px -2px #000000;
+    animation: increasing 2s infinite linear;
+    background: #226d6f;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px black;
+}
+
+.cell {
+    width: 32.5%;
+    height: 32.5%;
+    display: flex;
+    border: 2px solid rgb(37 114 126);
+}
+
+.friend {
+    width: 83%;
+    height: 67%;
+    margin: auto;
+    background: url(images/friend.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 5px #505050);
+    animation: showSlow 0.5s linear;
+}
+
+.friend2 {
+    width: 70px;
+    height: 70px;
+    background: rgb(0, 128, 111);
+}
+
+.enemy {
+    width: 80%;
+    height: 85%;
+    margin: auto;
+    background: url(images/enemy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 15px #de0707);
+    animation: showSlow 0.5s linear;
+}
+
+.options {
+    display: flex;
+    font-size: 32px;
+    color: white;
+    margin-top: 28px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lifes_wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+
+.lifes {
+    animation: pulseHearts 1s infinite linear;
+}
+
+.lifes img {
+    width: 46px;
+    height: 46px;
+    margin: 0 6px;
+}
+
+.timer,
+.score {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 6px 14px;
+    background: rgb(65 74 79);
+    color: #34c0d7;
+    text-shadow: 2px 2px black, 3px 3px #1c639e, -2px -2px #fff86a;
+}
+
+span {
+    font-size: 40px;
+    padding-left: 6px;
+    font-family: "Moderustic", sans-serif;
+}
+
+@keyframes showSlow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes increasing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1600px) {
+    .choice {
+        left: 8%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .choice {
+        font-size: 22px;
+        left: 8%;
+    }
+
+    .choice_title {
+        font-size: 24px;
+        text-shadow: 2px 2px black, 5px 5px #2574ba, -2px -2px #000000;
+    }
+}
+
+@media (max-width: 1080px) {
+    .choice {
+        display: none;
+    }
+}

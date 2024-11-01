@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GAME</title>
+</head>
+
+<body>
+
+
+    <div class="game" id="game">
+        <p class="title">Cat in Space</p>
+
+        <div id="final" class="final">
+            <div class="final-text">YOU DIED!</div>
+            <button class="final-btn" id="final-btn">RESTART</button>
+            <div class="final-score-text">Your score: <br/><span id="final_score"></span></div>
+            <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        </div>
+
+        <div id="game-wrap">
+            <section class="wrap" id="block-game">
+
+                <svg width="900" height="500" viewBox="0 0 900 500">
+                    <path d="M100 0V455" id="path" />
+                </svg>
+            </section>
+
+            <p class="score">Score: <span id="score">0</span></p>
+            <div class="lifes_wrap">
+                <div class="lifes">
+                    <img src="/images/heart.png" alt=""><img src="/images/heart.png" alt=""><img src="/images/heart.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

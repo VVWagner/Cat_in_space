@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+  <title>JS Game</title>
+</head>
+<body>
+  <div class="app">
+    <div class="app__header">
+      <h1 id="time-header">Время игры: <span id="time">5.0</span> сек.</h1>
+      <h1 id="result-header" class="hide">Ваш результат: <span id="result"></span></h1>
+    </div>
+    <div class="app__content">
+      <button class="btn" id="start">СТАРТ</button>
+
+      <div class="game" id="game"></div>
+    </div>
+    <div class="app__footer">
+      <div class="input">
+        <p>Изменить время:</p>
+        <input type="number" id="game-time" min="3" step="1" value="5">
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
